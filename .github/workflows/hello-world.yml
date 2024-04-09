@@ -10,3 +10,7 @@ jobs:
     - name: run this step even on failure
       if: failure()
       run: echo "i ran"
+    - name: fail again
+      run: exit 1
+    - name: this will not trigger
+      run: echo "hello-world"
