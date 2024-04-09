@@ -10,6 +10,12 @@ jobs:
     - name: run this step even on failure
       if: failure()
       run: echo "i ran"
+
+    - name: step2
+      if: failure()
+      run: echo "ran after failure"
+    - name: skipped-step 
+      run: echo "did i skip"
     - name: fail again
       run: exit 1
     - name: this will not trigger
